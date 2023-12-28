@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "703244890117",
+    "project_id": "arauth-c10d2",
+    "storage_bucket": "arauth-c10d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703244890117:android:a655805d173096c9e16c6c",
+        "android_client_info": {
+          "package_name": "ali.abdou.arauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhOeF_r73lgw88OgfGe3atiFWRHA77LwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
