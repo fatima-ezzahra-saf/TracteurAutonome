@@ -3,6 +3,7 @@ package ali.abdou.arauth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -55,6 +56,21 @@ public class MainActivity extends AppCompatActivity
             userName.setText(gName);
         }
 
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView tvEmail = headerView.findViewById(R.id.tvEmail);
+
+//        GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (gAccount != null) {
+            String gEmail = gAccount.getEmail();
+            String gName = gAccount.getDisplayName();
+            // Set the user's name and email
+            userName.setText(gName);
+            tvEmail.setText(gEmail);
+        }
+
 //        logout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -68,31 +84,15 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
-//        fragements logic
 
 
-        replaceFragment(new HomeFragment());
-        binding.bottomNavigationView.setBackground(null);
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            int id = item.getItemId();
-
-            if (id == R.id.home) {
-                replaceFragment(new HomeFragment());
-            } else if (id == R.id.shorts) {
-                replaceFragment(new InfoFragment());
-            } else if (id == R.id.subscriptions) {
-                replaceFragment(new FavoriteFragment());
-            }
-
-            return true;
-        });
 //
         // side bar logic
 
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+//        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
                 R.string.close_nav);
@@ -103,14 +103,35 @@ public class MainActivity extends AppCompatActivity
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
+        //        fragements logic of rht ebuttom navbar
+
+
+        replaceFragment(new HomeFragment());
+        binding.bottomNavigationView.setBackground(null);
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.home) {
+                replaceFragment(new InfoBFragment());
+            } else if (id == R.id.shorts) {
+                replaceFragment(new InfoFragment());
+            } else if (id == R.id.subscriptions) {
+                replaceFragment(new FavoriteFragment());
+            }
+
+            return true;
+        });
+
+
 
     }
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.replace(R.id.frame_layout, fragment); // Ensure this is the correct container ID
         fragmentTransaction.commit();
     }
+
 
     //side bar functions
     @Override
