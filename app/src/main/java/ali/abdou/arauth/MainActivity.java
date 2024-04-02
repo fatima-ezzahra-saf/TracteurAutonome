@@ -21,6 +21,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import ali.abdou.arauth.databinding.ActivityMainBinding;
@@ -102,33 +104,40 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
-
-        //        fragements logic of rht ebuttom navbar
-
-
         replaceFragment(new HomeFragment());
         binding.bottomNavigationView.setBackground(null);
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            int id = item.getItemId();
 
-            if (id == R.id.home) {
-                replaceFragment(new InfoBFragment());
-            } else if (id == R.id.shorts) {
-                replaceFragment(new InfoFragment());
-            } else if (id == R.id.subscriptions) {
-                replaceFragment(new FavoriteFragment());
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home) {
+                    replaceFragment(new HomeFragment());
+                } else if (id == R.id.shorts) {
+                    replaceFragment(new InfoFragment());
+                } else if (id == R.id.subscriptions) {
+                    replaceFragment(new ControleFragment());
+                } else if (id == R.id.aboutUs) {
+                    replaceFragment(new AboutFragment());
+                }
+
+                return true;
             }
-
-            return true;
+        });
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new CameraFragment());
+            }
         });
 
-
-
     }
+    
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment); // Ensure this is the correct container ID
+        fragmentTransaction.replace(R.id.fragment_container, fragment); // Ensure this is the correct container ID
         fragmentTransaction.commit();
     }
 
@@ -157,6 +166,7 @@ public class MainActivity extends AppCompatActivity
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     @Override
     public void onBackPressed() {

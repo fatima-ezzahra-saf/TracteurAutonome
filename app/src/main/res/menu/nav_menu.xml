@@ -24,7 +24,7 @@
 
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/baseline_lock_24"
+            android:icon="@drawable/groupe"
             android:title="About Us"/>
     </group>
     <item

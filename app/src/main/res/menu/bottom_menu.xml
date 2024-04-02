@@ -18,12 +18,12 @@
 
     <item
         android:id="@+id/subscriptions"
-        android:title="Items"
-        android:icon="@drawable/baseline_subscriptions_24"/>
+        android:title="controller"
+        android:icon="@drawable/manette"/>
 
     <item
-        android:id="@+id/library"
-        android:title="Favorite"
-        android:icon="@android:drawable/btn_star_big_on"/>
+        android:id="@+id/aboutUs"
+        android:title="About Us"
+        android:icon="@drawable/groupe"/>
 
 </menu>

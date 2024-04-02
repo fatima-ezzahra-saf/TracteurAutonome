@@ -1,13 +1,45 @@
 <resources>
-    <string name="app_name">ArAuth</string>
-
+    <string name="app_name">Auto Plow</string>
+    <string name="description">Touching the Skies of Innovation, Every Challenge Transformed</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_nav">Open Navigation Drawer</string>
+    <string name="saadia_name">saadia AIT ALI MHAMED</string>
+    <string name="saadia_role">delivery manager</string>
+    <string name="saadia_email">saadiaaitali54@gmail.com</string>
+    <string name="saadia_Linkdin">www.linkedin.com/in/saadia-ait-ali-mhamed-64b427282</string>
+    <string name="ali_name">ALI ABDOU</string>
+    <string name="ali_role">Project manager</string>
+    <string name="ali_email">aliabdoufb1@gmail.com</string>
+    <string name="ali_Linkdin">https://www.linkedin.com/in/abdou-ali-url?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADi3SPwBgA-aHZgPcHl_PSNN541wyovr08klipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BLGv5I8AFQx2eAP8w%2FMd8AA%3D%3D</string>
+    <string name="fatima_name">fatima EL-MANANI</string>
+    <string name="fatima_role">Communication manager</string>
+    <string name="fatima_email">fatimaelmanani80@gmail.com</string>
+    <string name="fatima_Linkdin">www.linkedin.com/in/saadia-ait-ali-mhamed-64b427282</string>
+    <string name="fati_name">fatima Ezzahra safrani</string>
+    <string name="fati_role">Code quality manager</string>
+    <string name="fati_email">fatimaezzahrasafrani@gmail.com</string>
+    <string name="fati_Linkdin">www.linkedin.com/in/saadia-ait-ali-mhamed-64b427282</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <string name="about_us_title">About Us</string>
     <string name="about_us_content">Our app focuses on detecting traditional objects of the old city of Marrakech, Morocco, using augmented reality (AR) technology. It aims to enhance the experience of exploring Marrakech\'s rich cultural heritage by bringing historical artifacts to life through interactive AR displays.</string>
     <string name="about_us_image_desc">Image representing Marrakech</string>
+    <string name="touching_the_skies_of_innovation_every_challenge_transformed">Touching the Skies of Innovation, Every Challenge Transformed</string>
+    <string name="arrondissement_de_gu_liz_marrakesh_safi">Arrondissement de Guéliz, Marrakesh-Safi</string>
+    <string name="si_ge_social">Siège social</string>
+    <string name="fond_e_en">Fondée en</string>
+    <string name="_2023_2024">2023-2024</string>
+    <string name="_2_10_employ_s">2-10 employés</string>
+    <string name="taille_de_l_entreprise">Taille de l’entreprise</string>
+    <string name="technologie_information_et_internet">Technologie, information et Internet</string>
+    <string name="secteur">Secteur</string>
+    <string name="https_skytech213_blogspot_com">https://skytech213.blogspot.com/</string>
+    <string name="site_web">Site web</string>
+    <string name="our_developers">Our Developers</string>
+    <string name="email">Email</string>
+    <string name="skytech2130_gmail_com">skytech2130@gmail.com</string>
+    <string name="our_company">Our Company</string>
+    <string name="descriptionSkytech">At Skytech, we specialize in providing innovative IT solutions for non-profit associations. Our services help organizations overcome challenges and thrive in today\'s digital landscape. Join us as we empower non-profits to make a meaningful impact in their communities.</string>
 </resources>

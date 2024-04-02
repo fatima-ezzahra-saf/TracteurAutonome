@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControleFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0">
+
+        <SurfaceView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="334dp"
+            android:layout_above="@+id/controlLayout"
+            android:layout_marginBottom="-49dp" />
+
+        <LinearLayout
+            android:id="@+id/controlLayout"
+            android:layout_width="match_parent"
+            android:layout_height="323dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="123dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutButtons"
+                android:layout_width="match_parent"
+                android:layout_height="295dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnForward"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/button_background_haut"
+                        android:text=" "
+                        android:textColor="#ffffff"
+                        android:textSize="50sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnLeft"
+                            android:layout_width="100dp"
+                            android:layout_height="101dp"
+                            android:background="@drawable/button_background_gauche"
+                            android:textColor="#ffffff"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btnStop"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/arreter"
+                            android:textColor="#0C0C0C"
+                            android:textSize="23sp" />
+
+                        <Button
+                            android:id="@+id/btnRight"
+                            android:layout_width="100dp"
+                            android:layout_height="101dp"
+                            android:background="@drawable/button_background_droite"
+                            android:text=" "
+                            android:textColor="#ffffff"
+                            android:textSize="40sp" />
+
+                        <androidx.constraintlayout.widget.Barrier
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnReverse"
+                        android:layout_width="100dp"
+                        android:layout_height="92dp"
+                        android:background="@drawable/button_background_bas"
+                        android:text=" "
+                        android:textColor="#402E43"
+                        android:textSize="40sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
