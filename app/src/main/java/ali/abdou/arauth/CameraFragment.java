@@ -31,7 +31,7 @@ public class CameraFragment extends Fragment {
         superWebView = rootView.findViewById(R.id.myWebView);
 
         superProgressBar.setMax(100);
-        superWebView.loadUrl("http://192.168.137.73:5000/video_feed");
+        superWebView.loadUrl("http://192.168.137.165:5000/video_feed");
         superWebView.getSettings().setJavaScriptEnabled(true);
 
         superWebView.getSettings().setLoadWithOverviewMode(true);
