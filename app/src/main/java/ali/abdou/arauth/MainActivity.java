@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         if (gAccount != null) {
             String gEmail = gAccount.getEmail();
             String gName = gAccount.getDisplayName();
-            // Set the user's name and email
+            // Set the user's name and emailp
             userName.setText(gName);
             tvEmail.setText(gEmail);
         }
