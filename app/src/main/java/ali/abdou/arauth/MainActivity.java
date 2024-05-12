@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity
                 replaceFragment(new CameraFragment());
             }
         });
-
     }
     
     private void replaceFragment(Fragment fragment) {

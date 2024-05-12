@@ -1,20 +1,27 @@
 <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical|center_horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
-        android:id="@+id/dim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Entrez les dims" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="388dp"
+        android:layout_height="318dp"
+        app:srcCompat="@drawable/pagebkg1" />
 
     <Button
-        android:id="@+id/img"
+        android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrez une image" />
+        android:text="upload image" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ok" />
+
+
 </LinearLayout>
